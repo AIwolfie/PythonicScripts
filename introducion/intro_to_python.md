@@ -1,11 +1,12 @@
 
 # Welcome to PythonicScripts: Introduction to Python Programming for Beginners
+![Logo](https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/community/logos/python-logo-only.png)
+
 
 ## What is Python?
 
 Python is a powerful and beginner-friendly programming language used for a wide range of applications, from web development and data analysis to artificial intelligence and automation. It's known for its simplicity, readability, and versatility, making it an ideal choice for beginners and experienced developers alike
 
--------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Why Python?
 
