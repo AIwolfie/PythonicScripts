@@ -21,3 +21,10 @@ Dive into the exercises, experiment with code, and explore Python concepts hands
 
 
 PythonicScripts is not just a repository; it's a community-driven platform where beginners and enthusiasts come together to learn, grow, and conquer Python. Let's embark on this exciting Python adventure together! 🚀
+
+
+
+## Authors
+
+- [@Aiwolfie](https://github.com/AIwolfie)
+
