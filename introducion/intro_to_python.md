@@ -5,6 +5,7 @@
 
 Python is a powerful and beginner-friendly programming language used for a wide range of applications, from web development and data analysis to artificial intelligence and automation. It's known for its simplicity, readability, and versatility, making it an ideal choice for beginners and experienced developers alike
 
+-------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Why Python?
 
