@@ -1,31 +1,51 @@
 import random
 
-print("----------------------------------------------------------------")
-print("                      NUMBER GUESSING GAME")
-print("----------------------------------------------------------------")
-print("-> i am gussing a number between 1 to 100")
-print("-> you have to guess the number")
-print("-> you have only 5 chance")
-print("-> if you guess the number you win the game")
-print("----------------------------------------------------------------")
+print("---------------------------------------------------------------------------")
+print("                      Welcome to Rock-Paper-Scissors!")
+print("---------------------------------------------------------------------------")
 
-rnum = random.randint(1, 100)
-guessing_chance= 5
-for chance in range (guessing_chance):
-    try:
-        print("guess the number between 1 to 100")
-        guess_number = int(input(f"chance {chance+1}: Enter you Guess: "))
+def user_choice():
+    print("1. Rock     2. Paper     3. Scissors")
+    user_choice = input('Enter your choice (1, 2, 3 or rock, paper, scissor): ').lower()
+    while user_choice not in ['1', '2', '3', 'rock', 'paper', 'scissor']:
+        user_choice = input('Invalid choice. Enter again (1, 2, 3 or rock, paper, scissor): ').lower()
 
-        if guess_number == rnum:
-            print(f"Congratulations! You've guessed the number {guess_number} correctly!")
+    if user_choice == '1':
+        return 'rock'
+    elif user_choice == '2':
+        return 'paper'
+    elif user_choice == '3':
+        return 'scissor'
+    else:
+        return user_choice
+
+def computer_choice():
+    return random.choice(["rock", "paper", "scissor"])
+
+def choose_winner(user_choice, computer_choice):
+    if user_choice == computer_choice:
+        return "It's a tie!"
+    elif (user_choice == "rock" and computer_choice == "scissor") or \
+         (user_choice == "scissor" and computer_choice == "paper") or \
+         (user_choice == "paper" and computer_choice == "rock"):
+        return "You win!"
+    else:
+        return "Computer wins!"
+
+def start_game():
+    while True:
+        users_choice = user_choice()
+        computers_choice = computer_choice()
+        print(f"\nYou chose: {users_choice}")
+        print(f"Computer chose: {computers_choice}")
+        result = choose_winner(users_choice, computers_choice)
+        print(f"\n{result}")
+
+        play_again = input("\nDo you want to play again? (yes/no): ").lower()
+        while play_again not in ["yes", "no"]:
+            play_again = input("Invalid choice. Do you want to play again? (yes/no): ").lower()
+        if play_again == "no":
+            print("Thanks for playing!")
             break
-        elif guess_number < rnum:
-            print(f"Your guess {guess_number} is too low.")
-        else:
-            print(f"Your guess {guess_number} is too high.")
-        
-        if chance == guessing_chance-1:
-            print(f"Sorry! You've run out of chances.")
-            print(f"The number was {rnum}")
-    except ValueError:
-        print("Invalid Input! Please enter a valid number.")
+
+start_game()
